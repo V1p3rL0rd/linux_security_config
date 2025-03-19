@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Update the system
+# Update the system and install EPEL repo
 sudo dnf update -y
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y
 
 # Install and configure firewalld (if not already installed)
 if ! rpm -q firewalld > /dev/null; then
@@ -33,7 +34,6 @@ else
 fi
 
 # Install and configure fail2ban
-sudo dnf install epel-release -y
 sudo dnf install fail2ban -y
 sudo systemctl enable fail2ban
 sudo systemctl start fail2ban
