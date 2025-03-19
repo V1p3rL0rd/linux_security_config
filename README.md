@@ -1,5 +1,6 @@
 # Linux security configuration
 Security configuration script for Ubuntu and RHEL linux
+
 ATTENTION! The script must be run from root! Authentication by SSH keys should work
 
 This script performs the following steps to protect your system:
