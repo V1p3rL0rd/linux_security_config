@@ -25,11 +25,6 @@ else
     echo "cups is not installed, skipping."
 fi
 
-# Configure SSH
-sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config
-sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
-sudo systemctl restart sshd
-
 # Install fail2ban for brute-force attack protection
 sudo apt-get install fail2ban -y
 sudo systemctl enable fail2ban
