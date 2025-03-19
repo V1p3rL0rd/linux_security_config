@@ -68,4 +68,4 @@ sudo sed -i 's/# minclass = 0/minclass = 3/' /etc/security/pwquality.conf
 sudo dnf install lynis -y
 sudo lynis audit system
 
-echo "Advanced security configuration has been completed."
+echo "System security configuration has been completed."
