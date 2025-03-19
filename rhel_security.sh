@@ -27,11 +27,6 @@ else
     echo "cups is not installed, skipping."
 fi
 
-# Configure SSH
-sudo sed -i 's/#PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
-sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
-sudo systemctl restart sshd
-
 # Install and configure fail2ban
 sudo dnf install epel-release -y
 sudo dnf install fail2ban -y
