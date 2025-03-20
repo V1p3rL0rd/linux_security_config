@@ -24,7 +24,7 @@ This repository contains scripts for automating basic security configuration in 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/linux_security_config.git
+git clone https://github.com/V1p3rL0rd/linux_security_config.git
 cd linux_security_config
 ```
 
@@ -79,7 +79,3 @@ sudo ./rhel_security.sh
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contributing
-
-We welcome your contributions to the project! Please create pull requests or open issues to discuss changes. 
