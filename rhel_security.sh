@@ -62,7 +62,7 @@ systemctl start auditd
 # Configure password policies
 dnf install libpwquality -y
 sed -i 's/# minlen = 8/minlen = 12/' /etc/security/pwquality.conf
-sed -i 's/# minclass = 0/minclass = 3/' /etc/security/pwquality.conf
+sed -i 's/# minclass = 0/minclass = 4/' /etc/security/pwquality.conf
 
 # Install Lynis for security auditing
 dnf install lynis -y
