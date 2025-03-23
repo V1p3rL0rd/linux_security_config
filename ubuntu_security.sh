@@ -59,7 +59,7 @@ sudo systemctl start auditd
 # Configure password policies
 sudo apt install libpam-pwquality -y
 sudo sed -i 's/# minlen = 8/minlen = 12/' /etc/security/pwquality.conf
-sudo sed -i 's/# minclass = 0/minclass = 3/' /etc/security/pwquality.conf
+sudo sed -i 's/# minclass = 0/minclass = 4/' /etc/security/pwquality.conf
 
 # Install Lynis for security auditing
 sudo apt install lynis -y
