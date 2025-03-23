@@ -61,6 +61,17 @@ sudo apt install libpam-pwquality -y
 sudo sed -i 's/# minlen = 8/minlen = 12/' /etc/security/pwquality.conf
 sudo sed -i 's/# minclass = 0/minclass = 4/' /etc/security/pwquality.conf
 
+# Configure password expiration policy
+sudo sed -i 's/^\(PASS_MAX_DAYS\s*\).*/\1180/' /etc/login.defs
+sudo sed -i 's/^\(PASS_WARN_AGE\s*\).*/\114/' /etc/login.defs
+
+# Apply to existing users
+for user in $(cut -d: -f1 /etc/passwd); do
+  if sudo chage -l "$user" &> /dev/null; then
+    sudo chage --maxdays 180 "$user"
+  fi
+done
+
 # Install Lynis for security auditing
 sudo apt install lynis -y
 sudo lynis audit system
