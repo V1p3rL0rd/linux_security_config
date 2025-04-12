@@ -1,6 +1,6 @@
 # Linux Security Configuration Scripts
 
-This repository contains scripts for automating basic security configuration in Linux systems. The scripts are designed for Ubuntu and RHEL (Red Hat Enterprise Linux) and include essential security measures recommended for server systems.
+This repository contains scripts for automating basic security configuration in Linux systems. The scripts are designed for Ubuntu, RHEL (Red Hat Enterprise Linux) and AlmaLinux and include essential security measures recommended for server systems.
 
 ## Features
 
