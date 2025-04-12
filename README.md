@@ -17,7 +17,7 @@ This repository contains scripts for automating basic security configuration in 
 ## Requirements
 
 - Ubuntu 20.04 or newer
-- RHEL 9 or newer
+- RHEL/AlmaLinux 9 or newer
 - sudo privileges to execute scripts
 
 ## Installation
