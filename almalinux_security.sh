@@ -119,10 +119,14 @@ if [ -f /etc/ssh/sshd_config ]; then
     echo "SSH has been hardened."
 fi
 
+# Install Chkrootkit 
+echo "Installing rootkit auditing tool..."
+dnf install chkrootkit -y
+
 # Install and run Lynis for security auditing
-echo "Installing Lynis for security auditing..."
+echo "Installing Lynis security auditing tool..."
 dnf install lynis -y
-lynis audit system --no-colors | tee /var/log/lynis-report.log
+lynis audit system
 
 # Final recommendations
 echo ""
