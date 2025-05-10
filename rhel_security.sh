@@ -75,6 +75,9 @@ for user in $(cut -d: -f1 /etc/passwd); do
   fi
 done
 
+# Install Chkrootkit
+dnf install chkrootkit -y
+
 # Install Lynis for security auditing
 dnf install lynis -y
 lynis audit system
