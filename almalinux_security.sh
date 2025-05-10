@@ -120,7 +120,7 @@ if [ -f /etc/ssh/sshd_config ]; then
 fi
 
 # Install Chkrootkit 
-echo "Installing rootkit auditing tool..."
+echo "Installing rootkits auditing tool..."
 dnf install chkrootkit -y
 
 # Install and run Lynis for security auditing
