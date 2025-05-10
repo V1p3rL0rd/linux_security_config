@@ -72,6 +72,9 @@ for user in $(cut -d: -f1 /etc/passwd); do
   fi
 done
 
+# Install rootkits auditing tool
+apt install chkrootkit -y
+
 # Install Lynis for security auditing
 sudo apt install lynis -y
 sudo lynis audit system
